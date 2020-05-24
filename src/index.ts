@@ -1,1 +1,8 @@
-console.log('hi there');
+import {User} from './models/User';
+
+const user = new User({name: 'FirstName LastName', age: 20});
+
+user.set({name: 'new LastName'});
+
+console.log(user.get('name'));
+console.log(user.get('age'));
