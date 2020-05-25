@@ -1,9 +1,14 @@
 import {User} from './models/User';
 
-const user = new User({id: 1, name: 'NEWER NAME', age: 188});
+const user = User.buildUser({id: 1});
 
-user.on('save', () => {
+user.on('change', () => {
   console.log(user);
 });
 
-user.save();
+user.fetch();
+
+/**
+ * Example method exclusive to the user
+ */
+// console.log(user.isAdminUser());
