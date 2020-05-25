@@ -28,19 +28,8 @@ export class Model<T extends HasId> {
   ) {}
 
   on = this.events.on;
-  // get on() {
-  //   return this.events.on;
-  // }
-
   trigger = this.events.trigger;
-  // get trigger() {
-  //   return this.events.trigger;
-  // }
-
   get = this.attributes.get;
-  // get get() {
-  //   return this.attributes.get;
-  // }
 
   set(update: T) {
     this.attributes.set(update);
